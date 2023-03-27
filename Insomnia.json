@@ -1,13 +1,13 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2023-03-06T14:38:50.295Z",
-  "__export_source": "insomnia.desktop.app:v2022.7.5",
+  "__export_date": "2023-03-27T19:14:29.739Z",
+  "__export_source": "insomnia.desktop.app:v2023.1.0",
   "resources": [
     {
       "_id": "req_5ea3810ceaae4b55a63226c5711ba618",
       "parentId": "wrk_696d6438d3164103b8474428b4e681cc",
-      "modified": 1677751292214,
+      "modified": 1679647479569,
       "created": 1677616662361,
       "url": "https://api.ecoledirecte.com/v3/login.awp",
       "name": "AUTH",
@@ -59,62 +59,6 @@
       "_type": "workspace"
     },
     {
-      "_id": "req_c8725829fa7349c487b3c22af8372969",
-      "parentId": "fld_acb76dea019d41d1a6154adaba554104",
-      "modified": 1677751239215,
-      "created": 1677751014286,
-      "url": "{{ _.base_url }}/classes/{% prompt 'ID CLASSE', 'ID CLASSE', '', '', false, true %}/eleves.awp?verbe=get",
-      "name": "LISTE",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "text/plain",
-        "text": "data={}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "text/plain",
-          "id": "pair_da6e720040bb4431bb15a67b641916fd"
-        },
-        {
-          "id": "pair_95df22947d88461baaca60aa205db67f",
-          "name": "X-Token",
-          "value": "{{ _.token }}",
-          "description": ""
-        },
-        {
-          "id": "pair_997347b40daf4ff6819055cf8da2ce66",
-          "name": "User-Agent",
-          "value": "{{ _.userAgent }}",
-          "description": ""
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1677751014286,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "fld_acb76dea019d41d1a6154adaba554104",
-      "parentId": "wrk_696d6438d3164103b8474428b4e681cc",
-      "modified": 1677751293320,
-      "created": 1677750993367,
-      "name": "ETUDIANTS",
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1677629788426.875,
-      "_type": "request_group"
-    },
-    {
       "_id": "req_d1569ebb222e48d895ef65c16e37d3ba",
       "parentId": "fld_acb76dea019d41d1a6154adaba554104",
       "modified": 1677751401178,
@@ -159,9 +103,82 @@
       "_type": "request"
     },
     {
+      "_id": "fld_acb76dea019d41d1a6154adaba554104",
+      "parentId": "wrk_696d6438d3164103b8474428b4e681cc",
+      "modified": 1677751293320,
+      "created": 1677750993367,
+      "name": "ETUDIANTS",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1677629788426.875,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_806def8cbfca48aea376f7d4245a1f4b",
+      "parentId": "fld_67c0fa87c96f446e9fccd07c2dc7fb96",
+      "modified": 1679944395547,
+      "created": 1679944295730,
+      "url": "{{ _.base_url }}/classes/{% prompt 'ID CLASSE', 'ID CLASSE', '', '', false, true %}/eleves.awp?verbe=get",
+      "name": "LISTE DES ETUDIANTS",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "text/plain",
+        "text": "data={}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_b37126573c854406b85e983c77284fd9",
+          "name": "X-Token",
+          "value": "{{ _.token }}",
+          "description": ""
+        },
+        {
+          "id": "pair_99d38edcf3c849dbb3b8be616bca3eca",
+          "name": "User-Agent",
+          "value": "{{ _.userAgent }}",
+          "description": ""
+        },
+        {
+          "id": "pair_daeec4a8caf74f2bb2505d0529af444d",
+          "name": "",
+          "value": "",
+          "description": ""
+        },
+        {
+          "name": "Content-Type",
+          "value": "text/plain"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1679944295730,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_67c0fa87c96f446e9fccd07c2dc7fb96",
+      "parentId": "wrk_696d6438d3164103b8474428b4e681cc",
+      "modified": 1679944263515,
+      "created": 1679944252900,
+      "name": "PROFESSEUR",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1677629788401.875,
+      "_type": "request_group"
+    },
+    {
       "_id": "env_e42ae5d4502def130b25030eb58c0cdf326b5670",
       "parentId": "wrk_696d6438d3164103b8474428b4e681cc",
-      "modified": 1677621058992,
+      "modified": 1678621685404,
       "created": 1677616649078,
       "name": "Base Environment",
       "data": {
